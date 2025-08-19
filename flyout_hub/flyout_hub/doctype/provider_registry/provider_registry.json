@@ -1,0 +1,826 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 16:43:48.091170",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "provider_information_section",
+  "provider_name",
+  "provider_code",
+  "tenant_url",
+  "provider_type",
+  "company_registration",
+  "column_break_1",
+  "primary_contact_person",
+  "primary_email",
+  "primary_phone",
+  "country_of_operation",
+  "city",
+  "address",
+  "subscription_tier_section",
+  "subscription_tier",
+  "tier_features",
+  "sync_frequency",
+  "max_monthly_leads",
+  "subscription_start_date",
+  "subscription_end_date",
+  "column_break_2",
+  "monthly_subscription_fee",
+  "commission_rate",
+  "revenue_sharing_model",
+  "payment_terms",
+  "auto_renewal",
+  "services_capabilities_section",
+  "services_offered",
+  "target_countries",
+  "specializations",
+  "languages_supported",
+  "processing_capacity",
+  "column_break_3",
+  "team_size",
+  "years_of_experience",
+  "certifications",
+  "partnerships",
+  "office_hours",
+  "time_zone",
+  "performance_metrics_section",
+  "total_leads_received",
+  "total_conversions",
+  "conversion_rate",
+  "avg_response_time_hours",
+  "avg_processing_time_days",
+  "client_satisfaction_score",
+  "column_break_4",
+  "success_rate",
+  "nps_score",
+  "quality_score",
+  "total_revenue_generated",
+  "avg_deal_value",
+  "last_performance_review",
+  "compliance_quality_section",
+  "compliance_status",
+  "last_compliance_check",
+  "next_compliance_review",
+  "regulatory_licenses",
+  "insurance_coverage",
+  "data_privacy_compliance",
+  "column_break_5",
+  "quality_assurance_level",
+  "audit_frequency",
+  "last_audit_date",
+  "audit_score",
+  "compliance_notes",
+  "risk_assessment",
+  "financial_performance_section",
+  "monthly_revenue",
+  "quarterly_revenue",
+  "annual_revenue",
+  "revenue_growth_rate",
+  "commission_paid",
+  "outstanding_amount",
+  "column_break_6",
+  "payment_history_score",
+  "credit_limit",
+  "financial_health_score",
+  "profitability_index",
+  "revenue_per_lead",
+  "last_payment_date",
+  "competitive_analysis_section",
+  "market_position",
+  "competitive_advantages",
+  "market_share_estimate",
+  "key_competitors",
+  "pricing_strategy",
+  "column_break_7",
+  "brand_reputation_score",
+  "online_presence_score",
+  "customer_acquisition_cost",
+  "customer_lifetime_value",
+  "market_trends_adaptation",
+  "innovation_score",
+  "operational_management_section",
+  "provider_status",
+  "onboarding_status",
+  "onboarding_completion_date",
+  "contract_signed_date",
+  "go_live_date",
+  "last_sync_datetime",
+  "column_break_8",
+  "sync_status",
+  "api_connection_status",
+  "last_activity_date",
+  "account_manager",
+  "technical_contact",
+  "escalation_contact",
+  "additional_information_section",
+  "website_url",
+  "social_media_links",
+  "business_description",
+  "success_stories",
+  "preferred_communication_method",
+  "column_break_9",
+  "internal_notes",
+  "public_profile_summary",
+  "tags",
+  "custom_fields",
+  "created_by_user",
+  "last_updated_by"
+ ],
+ "fields": [
+  {
+   "default": "PRV-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PRV-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider_information_section",
+   "fieldtype": "Section Break",
+   "label": "Provider Information"
+  },
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "tenant_url",
+   "fieldtype": "Data",
+   "label": "Tenant URL",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "provider_type",
+   "fieldtype": "Select",
+   "label": "Provider Type",
+   "options": "Education Consultant\nImmigration Consultant\nTour Operator\nJobPlacement Agency\nFull Service Provider\nSpecialized Service\nGovernment Partner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company_registration",
+   "fieldtype": "Data",
+   "label": "Company Registration Number"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_contact_person",
+   "fieldtype": "Data",
+   "label": "Primary Contact Person"
+  },
+  {
+   "fieldname": "primary_email",
+   "fieldtype": "Data",
+   "label": "Primary Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "primary_phone",
+   "fieldtype": "Data",
+   "label": "Primary Phone"
+  },
+  {
+   "fieldname": "country_of_operation",
+   "fieldtype": "Data",
+   "label": "Country of Operation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text Editor",
+   "label": "Address"
+  },
+  {
+   "fieldname": "subscription_tier_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription & Tier Management"
+  },
+  {
+   "default": "Bronze",
+   "fieldname": "subscription_tier",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Subscription Tier",
+   "options": "Bronze\nSilver\nGold\nPlatinum\nDiamond\nEnterprise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tier_features",
+   "fieldtype": "Text Editor",
+   "label": "Tier Features Matrix"
+  },
+  {
+   "default": "Weekly",
+   "fieldname": "sync_frequency",
+   "fieldtype": "Select",
+   "label": "Sync Frequency",
+   "options": "Real-time\nHourly\nDaily\nWeekly\nManual"
+  },
+  {
+   "fieldname": "max_monthly_leads",
+   "fieldtype": "Int",
+   "label": "Max Monthly Leads"
+  },
+  {
+   "fieldname": "subscription_start_date",
+   "fieldtype": "Date",
+   "label": "Subscription Start Date"
+  },
+  {
+   "fieldname": "subscription_end_date",
+   "fieldtype": "Date",
+   "label": "Subscription End Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_subscription_fee",
+   "fieldtype": "Currency",
+   "label": "Monthly Subscription Fee"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate (%)"
+  },
+  {
+   "fieldname": "revenue_sharing_model",
+   "fieldtype": "Select",
+   "label": "Revenue Sharing Model",
+   "options": "Flat Rate\nPercentage Based\nTiered Commission\nHybrid Model"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Select",
+   "label": "Payment Terms",
+   "options": "Net 15\nNet 30\nNet 45\nPrepaid\nCredit Terms"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "services_capabilities_section",
+   "fieldtype": "Section Break",
+   "label": "Services & Capabilities"
+  },
+  {
+   "fieldname": "services_offered",
+   "fieldtype": "Text Editor",
+   "label": "Services Offered",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_countries",
+   "fieldtype": "Text Editor",
+   "label": "Target Countries"
+  },
+  {
+   "fieldname": "specializations",
+   "fieldtype": "Text Editor",
+   "label": "Specializations"
+  },
+  {
+   "fieldname": "languages_supported",
+   "fieldtype": "Text Editor",
+   "label": "Languages Supported"
+  },
+  {
+   "fieldname": "processing_capacity",
+   "fieldtype": "Int",
+   "label": "Monthly Processing Capacity"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "team_size",
+   "fieldtype": "Int",
+   "label": "Team Size"
+  },
+  {
+   "fieldname": "years_of_experience",
+   "fieldtype": "Int",
+   "label": "Years of Experience"
+  },
+  {
+   "fieldname": "certifications",
+   "fieldtype": "Text Editor",
+   "label": "Certifications & Accreditations"
+  },
+  {
+   "fieldname": "partnerships",
+   "fieldtype": "Text Editor",
+   "label": "Key Partnerships"
+  },
+  {
+   "fieldname": "office_hours",
+   "fieldtype": "Data",
+   "label": "Office Hours"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "performance_metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics & Analytics"
+  },
+  {
+   "fieldname": "total_leads_received",
+   "fieldtype": "Int",
+   "label": "Total Leads Received",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_conversions",
+   "fieldtype": "Int",
+   "label": "Total Conversions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Percent",
+   "label": "Conversion Rate (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_response_time_hours",
+   "fieldtype": "Float",
+   "label": "Average Response Time (Hours)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_processing_time_days",
+   "fieldtype": "Float",
+   "label": "Average Processing Time (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "client_satisfaction_score",
+   "fieldtype": "Rating",
+   "label": "Client Satisfaction Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Percent",
+   "label": "Success Rate (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "nps_score",
+   "fieldtype": "Int",
+   "label": "Net Promoter Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_score",
+   "fieldtype": "Int",
+   "label": "Quality Score (1-100)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue_generated",
+   "fieldtype": "Currency",
+   "label": "Total Revenue Generated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "avg_deal_value",
+   "fieldtype": "Currency",
+   "label": "Average Deal Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_performance_review",
+   "fieldtype": "Date",
+   "label": "Last Performance Review",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_quality_section",
+   "fieldtype": "Section Break",
+   "label": "Compliance & Quality Assurance"
+  },
+  {
+   "default": "Under Review",
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Compliant\nMinor Issues\nMajor Issues\nNon-Compliant\nUnder Review"
+  },
+  {
+   "fieldname": "last_compliance_check",
+   "fieldtype": "Date",
+   "label": "Last Compliance Check"
+  },
+  {
+   "fieldname": "next_compliance_review",
+   "fieldtype": "Date",
+   "label": "Next Compliance Review"
+  },
+  {
+   "fieldname": "regulatory_licenses",
+   "fieldtype": "Text Editor",
+   "label": "Regulatory Licenses"
+  },
+  {
+   "fieldname": "insurance_coverage",
+   "fieldtype": "Text Editor",
+   "label": "Insurance Coverage Details"
+  },
+  {
+   "fieldname": "data_privacy_compliance",
+   "fieldtype": "Select",
+   "label": "Data Privacy Compliance",
+   "options": "GDPR Compliant\nCCPA Compliant\nBoth\nNone\nIn Progress"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Basic",
+   "fieldname": "quality_assurance_level",
+   "fieldtype": "Select",
+   "label": "Quality Assurance Level",
+   "options": "Gold Standard\nSilver Standard\nBronze Standard\nBasic\nNeeds Improvement"
+  },
+  {
+   "fieldname": "audit_frequency",
+   "fieldtype": "Select",
+   "label": "Audit Frequency",
+   "options": "Monthly\nQuarterly\nSemi-Annual\nAnnual\nOn-Demand"
+  },
+  {
+   "fieldname": "last_audit_date",
+   "fieldtype": "Date",
+   "label": "Last Audit Date"
+  },
+  {
+   "fieldname": "audit_score",
+   "fieldtype": "Percent",
+   "label": "Last Audit Score (%)"
+  },
+  {
+   "fieldname": "compliance_notes",
+   "fieldtype": "Text Editor",
+   "label": "Compliance Notes"
+  },
+  {
+   "default": "Medium Risk",
+   "fieldname": "risk_assessment",
+   "fieldtype": "Select",
+   "label": "Risk Assessment",
+   "options": "Low Risk\nMedium Risk\nHigh Risk\nCritical Risk"
+  },
+  {
+   "fieldname": "financial_performance_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Performance & Revenue"
+  },
+  {
+   "fieldname": "monthly_revenue",
+   "fieldtype": "Currency",
+   "label": "Monthly Revenue"
+  },
+  {
+   "fieldname": "quarterly_revenue",
+   "fieldtype": "Currency",
+   "label": "Quarterly Revenue"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue"
+  },
+  {
+   "fieldname": "revenue_growth_rate",
+   "fieldtype": "Percent",
+   "label": "Revenue Growth Rate (%)"
+  },
+  {
+   "fieldname": "commission_paid",
+   "fieldtype": "Currency",
+   "label": "Total Commission Paid"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_history_score",
+   "fieldtype": "Rating",
+   "label": "Payment History Score"
+  },
+  {
+   "fieldname": "credit_limit",
+   "fieldtype": "Currency",
+   "label": "Credit Limit"
+  },
+  {
+   "fieldname": "financial_health_score",
+   "fieldtype": "Int",
+   "label": "Financial Health Score"
+  },
+  {
+   "fieldname": "profitability_index",
+   "fieldtype": "Float",
+   "label": "Profitability Index"
+  },
+  {
+   "fieldname": "revenue_per_lead",
+   "fieldtype": "Currency",
+   "label": "Revenue Per Lead"
+  },
+  {
+   "fieldname": "last_payment_date",
+   "fieldtype": "Date",
+   "label": "Last Payment Date"
+  },
+  {
+   "fieldname": "competitive_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Market Position & Competitive Analysis"
+  },
+  {
+   "fieldname": "market_position",
+   "fieldtype": "Select",
+   "label": "Market Position",
+   "options": "Market Leader\nStrong Competitor\nAverage Player\nEmerging Player\nNiche Specialist"
+  },
+  {
+   "fieldname": "competitive_advantages",
+   "fieldtype": "Text Editor",
+   "label": "Competitive Advantages"
+  },
+  {
+   "fieldname": "market_share_estimate",
+   "fieldtype": "Percent",
+   "label": "Market Share Estimate (%)"
+  },
+  {
+   "fieldname": "key_competitors",
+   "fieldtype": "Text Editor",
+   "label": "Key Competitors"
+  },
+  {
+   "fieldname": "pricing_strategy",
+   "fieldtype": "Select",
+   "label": "Pricing Strategy",
+   "options": "Premium Pricing\nCompetitive Pricing\nValue Pricing\nPenetration Pricing\nSkim Pricing"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brand_reputation_score",
+   "fieldtype": "Rating",
+   "label": "Brand Reputation Score"
+  },
+  {
+   "fieldname": "online_presence_score",
+   "fieldtype": "Int",
+   "label": "Online Presence Score"
+  },
+  {
+   "fieldname": "customer_acquisition_cost",
+   "fieldtype": "Currency",
+   "label": "Customer Acquisition Cost"
+  },
+  {
+   "fieldname": "customer_lifetime_value",
+   "fieldtype": "Currency",
+   "label": "Customer Lifetime Value"
+  },
+  {
+   "fieldname": "market_trends_adaptation",
+   "fieldtype": "Rating",
+   "label": "Market Trends Adaptation"
+  },
+  {
+   "fieldname": "innovation_score",
+   "fieldtype": "Int",
+   "label": "Innovation Score"
+  },
+  {
+   "fieldname": "operational_management_section",
+   "fieldtype": "Section Break",
+   "label": "Operational Management & Status"
+  },
+  {
+   "default": "Pending Approval",
+   "fieldname": "provider_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Provider Status",
+   "options": "Active\nInactive\nSuspended\nUnder Review\nPending Approval\nTerminated",
+   "reqd": 1
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "onboarding_status",
+   "fieldtype": "Select",
+   "label": "Onboarding Status",
+   "options": "Not Started\nIn Progress\nDocuments Pending\nTraining Required\nCompleted\nFailed"
+  },
+  {
+   "fieldname": "onboarding_completion_date",
+   "fieldtype": "Date",
+   "label": "Onboarding Completion Date"
+  },
+  {
+   "fieldname": "contract_signed_date",
+   "fieldtype": "Date",
+   "label": "Contract Signed Date"
+  },
+  {
+   "fieldname": "go_live_date",
+   "fieldtype": "Date",
+   "label": "Go Live Date"
+  },
+  {
+   "fieldname": "last_sync_datetime",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Date & Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Disconnected",
+   "fieldname": "sync_status",
+   "fieldtype": "Select",
+   "label": "Sync Status",
+   "options": "Healthy\nWarning\nFailed\nMaintenance\nDisconnected",
+   "read_only": 1
+  },
+  {
+   "default": "Disconnected",
+   "fieldname": "api_connection_status",
+   "fieldtype": "Select",
+   "label": "API Connection Status",
+   "options": "Connected\nDisconnected\nTimeout\nError\nMaintenance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_activity_date",
+   "fieldtype": "Date",
+   "label": "Last Activity Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Data",
+   "label": "Account Manager"
+  },
+  {
+   "fieldname": "technical_contact",
+   "fieldtype": "Data",
+   "label": "Technical Contact"
+  },
+  {
+   "fieldname": "escalation_contact",
+   "fieldtype": "Data",
+   "label": "Escalation Contact"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information & Notes"
+  },
+  {
+   "fieldname": "website_url",
+   "fieldtype": "Data",
+   "label": "Website URL"
+  },
+  {
+   "fieldname": "social_media_links",
+   "fieldtype": "Text Editor",
+   "label": "Social Media Links"
+  },
+  {
+   "fieldname": "business_description",
+   "fieldtype": "Text Editor",
+   "label": "Business Description"
+  },
+  {
+   "fieldname": "success_stories",
+   "fieldtype": "Text Editor",
+   "label": "Success Stories"
+  },
+  {
+   "fieldname": "preferred_communication_method",
+   "fieldtype": "Select",
+   "label": "Preferred Communication Method",
+   "options": "Email\nPhone\nWhatsApp\nSlack\nTeams\nVideo Call"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "public_profile_summary",
+   "fieldtype": "Text Editor",
+   "label": "Public Profile Summary"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "custom_fields",
+   "fieldtype": "Text Editor",
+   "label": "Custom Fields"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated_by",
+   "fieldtype": "Data",
+   "label": "Last Updated By",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 10:00:28.810351",
+ "modified_by": "Administrator",
+ "module": "Flyout Hub",
+ "name": "Provider Registry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "provider_name",
+ "track_changes": 1
+}

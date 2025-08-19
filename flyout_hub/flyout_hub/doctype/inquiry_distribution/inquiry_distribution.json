@@ -1,0 +1,564 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:inquiry_id",
+ "creation": "2025-08-02 16:48:09.051363",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inquiry_info_section",
+  "student_profile",
+  "inquiry_id",
+  "inquiry_type",
+  "priority_level",
+  "col_break_1",
+  "inquiry_date",
+  "target_country",
+  "field_of_study",
+  "budget_range",
+  "matching_section",
+  "matching_status",
+  "matching_algorithm",
+  "total_providers_evaluated",
+  "col_break_2",
+  "matching_confidence_score",
+  "processing_time_ms",
+  "last_matching_run",
+  "capacity_section",
+  "peak_capacity_check",
+  "real_time_availability",
+  "capacity_threshold_met",
+  "col_break_3",
+  "average_provider_capacity",
+  "capacity_warning_threshold",
+  "next_available_slot",
+  "quality_section",
+  "overall_quality_score",
+  "success_probability",
+  "risk_assessment_score",
+  "col_break_4",
+  "student_provider_compatibility",
+  "historical_success_rate",
+  "market_conditions_score",
+  "routing_section",
+  "geographic_routing_enabled",
+  "service_routing_enabled",
+  "timezone_consideration",
+  "col_break_5",
+  "primary_geographic_zone",
+  "service_specialization_match",
+  "cultural_affinity_score",
+  "load_balancing_section",
+  "load_balancing_strategy",
+  "fair_distribution_enabled",
+  "distribution_weight_factor",
+  "col_break_6",
+  "current_load_distribution",
+  "provider_queue_position",
+  "estimated_response_time",
+  "performance_section",
+  "machine_learning_enabled",
+  "continuous_learning",
+  "feedback_integration",
+  "col_break_7",
+  "learning_model_version",
+  "model_accuracy_score",
+  "last_model_update",
+  "analytics_section",
+  "conversion_prediction",
+  "revenue_potential",
+  "optimization_score",
+  "col_break_8",
+  "performance_benchmark",
+  "efficiency_rating",
+  "improvement_recommendations",
+  "metadata_section",
+  "distribution_id",
+  "created_by_system",
+  "auto_assignment_enabled",
+  "col_break_9",
+  "system_version",
+  "api_endpoint_used",
+  "debug_info"
+ ],
+ "fields": [
+  {
+   "fieldname": "inquiry_info_section",
+   "fieldtype": "Section Break",
+   "label": "Inquiry Information"
+  },
+  {
+   "fieldname": "student_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student Profile",
+   "options": "Student Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inquiry_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inquiry ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "inquiry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inquiry Type",
+   "options": "Study Abroad\nWork Visa\nTourism\nSpecial Scheme\nJob Placement\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "label": "Priority Level",
+   "options": "Critical\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "inquiry_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Inquiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_country",
+   "fieldtype": "Link",
+   "label": "Target Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "field_of_study",
+   "fieldtype": "Link",
+   "label": "Field of Study",
+   "options": "Field of Study"
+  },
+  {
+   "fieldname": "budget_range",
+   "fieldtype": "Select",
+   "label": "Budget Range",
+   "options": "Under $5,000\n$5,000 - $10,000\n$10,000 - $20,000\n$20,000 - $50,000\nAbove $50,000\nNot Specified"
+  },
+  {
+   "fieldname": "matching_section",
+   "fieldtype": "Section Break",
+   "label": "AI Matching Engine"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "matching_status",
+   "fieldtype": "Select",
+   "label": "Matching Status",
+   "options": "Pending\nIn Progress\nCompleted\nFailed\nManual Review Required",
+   "reqd": 1
+  },
+  {
+   "fieldname": "matching_algorithm",
+   "fieldtype": "Select",
+   "label": "Matching Algorithm Used",
+   "options": "AI Weighted Scoring\nGeographic Proximity\nService Specialization\nPerformance Based\nLoad Balancing\nManual Assignment"
+  },
+  {
+   "fieldname": "total_providers_evaluated",
+   "fieldtype": "Int",
+   "label": "Total Providers Evaluated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "matching_confidence_score",
+   "fieldtype": "Percent",
+   "label": "Matching Confidence Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processing_time_ms",
+   "fieldtype": "Int",
+   "label": "Processing Time (ms)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_matching_run",
+   "fieldtype": "Datetime",
+   "label": "Last Matching Run",
+   "read_only": 1
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacity & Availability Analysis"
+  },
+  {
+   "default": "1",
+   "fieldname": "peak_capacity_check",
+   "fieldtype": "Check",
+   "label": "Peak Capacity Check"
+  },
+  {
+   "default": "1",
+   "fieldname": "real_time_availability",
+   "fieldtype": "Check",
+   "label": "Real-time Availability Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "capacity_threshold_met",
+   "fieldtype": "Check",
+   "label": "Capacity Threshold Met",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "average_provider_capacity",
+   "fieldtype": "Percent",
+   "label": "Average Provider Capacity (%)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "85",
+   "fieldname": "capacity_warning_threshold",
+   "fieldtype": "Percent",
+   "label": "Capacity Warning Threshold (%)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "next_available_slot",
+   "fieldtype": "Datetime",
+   "label": "Next Available Slot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quality_section",
+   "fieldtype": "Section Break",
+   "label": "Quality Scoring & Success Probability"
+  },
+  {
+   "fieldname": "overall_quality_score",
+   "fieldtype": "Float",
+   "label": "Overall Quality Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "success_probability",
+   "fieldtype": "Percent",
+   "label": "Success Probability",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_assessment_score",
+   "fieldtype": "Float",
+   "label": "Risk Assessment Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_provider_compatibility",
+   "fieldtype": "Percent",
+   "label": "Student-Provider Compatibility",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "historical_success_rate",
+   "fieldtype": "Percent",
+   "label": "Historical Success Rate",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "market_conditions_score",
+   "fieldtype": "Float",
+   "label": "Market Conditions Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "routing_section",
+   "fieldtype": "Section Break",
+   "label": "Geographic & Service-based Routing"
+  },
+  {
+   "default": "1",
+   "fieldname": "geographic_routing_enabled",
+   "fieldtype": "Check",
+   "label": "Geographic Routing Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "service_routing_enabled",
+   "fieldtype": "Check",
+   "label": "Service-based Routing Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "timezone_consideration",
+   "fieldtype": "Check",
+   "label": "Timezone Consideration"
+  },
+  {
+   "fieldname": "col_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "primary_geographic_zone",
+   "fieldtype": "Select",
+   "label": "Primary Geographic Zone",
+   "options": "Asia Pacific\nNorth America\nEurope\nMiddle East\nAfrica\nLatin America"
+  },
+  {
+   "fieldname": "service_specialization_match",
+   "fieldtype": "Percent",
+   "label": "Service Specialization Match",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cultural_affinity_score",
+   "fieldtype": "Float",
+   "label": "Cultural Affinity Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "load_balancing_section",
+   "fieldtype": "Section Break",
+   "label": "Load Balancing & Fair Distribution"
+  },
+  {
+   "default": "Performance Based",
+   "fieldname": "load_balancing_strategy",
+   "fieldtype": "Select",
+   "label": "Load Balancing Strategy",
+   "options": "Round Robin\nWeighted Round Robin\nLeast Connections\nPerformance Based\nCapacity Based\nCustom Algorithm"
+  },
+  {
+   "default": "1",
+   "fieldname": "fair_distribution_enabled",
+   "fieldtype": "Check",
+   "label": "Fair Distribution Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "distribution_weight_factor",
+   "fieldtype": "Float",
+   "label": "Distribution Weight Factor",
+   "precision": "2"
+  },
+  {
+   "fieldname": "col_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_load_distribution",
+   "fieldtype": "Percent",
+   "label": "Current Load Distribution",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "provider_queue_position",
+   "fieldtype": "Int",
+   "label": "Provider Queue Position",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_response_time",
+   "fieldtype": "Float",
+   "label": "Estimated Response Time (hours)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Optimization & Learning"
+  },
+  {
+   "default": "1",
+   "fieldname": "machine_learning_enabled",
+   "fieldtype": "Check",
+   "label": "Machine Learning Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "continuous_learning",
+   "fieldtype": "Check",
+   "label": "Continuous Learning"
+  },
+  {
+   "default": "1",
+   "fieldname": "feedback_integration",
+   "fieldtype": "Check",
+   "label": "Feedback Integration Enabled"
+  },
+  {
+   "fieldname": "col_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "learning_model_version",
+   "fieldtype": "Data",
+   "label": "Learning Model Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "model_accuracy_score",
+   "fieldtype": "Percent",
+   "label": "Model Accuracy Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_model_update",
+   "fieldtype": "Datetime",
+   "label": "Last Model Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics & Monitoring"
+  },
+  {
+   "fieldname": "conversion_prediction",
+   "fieldtype": "Percent",
+   "label": "Conversion Prediction",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "revenue_potential",
+   "fieldtype": "Currency",
+   "label": "Revenue Potential",
+   "read_only": 1
+  },
+  {
+   "fieldname": "optimization_score",
+   "fieldtype": "Float",
+   "label": "Optimization Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performance_benchmark",
+   "fieldtype": "Percent",
+   "label": "Performance Benchmark",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "efficiency_rating",
+   "fieldtype": "Rating",
+   "label": "Efficiency Rating",
+   "read_only": 1
+  },
+  {
+   "fieldname": "improvement_recommendations",
+   "fieldtype": "Long Text",
+   "label": "Improvement Recommendations",
+   "read_only": 1
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "System Metadata"
+  },
+  {
+   "fieldname": "distribution_id",
+   "fieldtype": "Data",
+   "label": "Distribution ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "created_by_system",
+   "fieldtype": "Check",
+   "label": "Created by System",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_assignment_enabled",
+   "fieldtype": "Check",
+   "label": "Auto Assignment Enabled"
+  },
+  {
+   "fieldname": "col_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "system_version",
+   "fieldtype": "Data",
+   "label": "System Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "api_endpoint_used",
+   "fieldtype": "Data",
+   "label": "API Endpoint Used",
+   "read_only": 1
+  },
+  {
+   "fieldname": "debug_info",
+   "fieldtype": "Long Text",
+   "label": "Debug Information",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 10:00:15.273008",
+ "modified_by": "Administrator",
+ "module": "Flyout Hub",
+ "name": "Inquiry Distribution",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "inquiry_id",
+ "track_changes": 1
+}

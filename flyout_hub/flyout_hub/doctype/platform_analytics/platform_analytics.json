@@ -1,0 +1,656 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:analytics_id",
+ "creation": "2025-08-02 16:57:07.703529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "analytics_info_section",
+  "analytics_id",
+  "analytics_name",
+  "report_type",
+  "analytics_category",
+  "column_break_1",
+  "report_frequency",
+  "analytics_period",
+  "date_range_from",
+  "date_range_to",
+  "kpi_metrics_section",
+  "total_students",
+  "active_inquiries",
+  "total_providers",
+  "active_applications",
+  "column_break_2",
+  "conversion_rate",
+  "avg_response_time",
+  "platform_satisfaction",
+  "monthly_revenue",
+  "predictive_analytics_section",
+  "forecast_model",
+  "prediction_accuracy",
+  "forecasted_inquiries",
+  "forecasted_conversions",
+  "column_break_3",
+  "revenue_forecast",
+  "churn_probability",
+  "growth_trend",
+  "seasonality_factor",
+  "market_trends_section",
+  "trending_destinations",
+  "popular_programs",
+  "emerging_markets",
+  "market_saturation",
+  "column_break_4",
+  "competitive_landscape",
+  "opportunity_score",
+  "demand_volatility",
+  "market_sentiment",
+  "provider_benchmarking_section",
+  "top_performing_provider",
+  "avg_provider_conversion",
+  "best_conversion_rate",
+  "provider_satisfaction_avg",
+  "column_break_5",
+  "underperforming_providers",
+  "provider_tier_distribution",
+  "avg_response_time_providers",
+  "quality_score_variance",
+  "student_success_section",
+  "successful_applications",
+  "success_rate",
+  "avg_processing_time",
+  "student_satisfaction_score",
+  "column_break_6",
+  "nps_score",
+  "referral_rate",
+  "retention_rate",
+  "outcome_categories",
+  "revenue_optimization_section",
+  "total_platform_revenue",
+  "revenue_per_student",
+  "avg_commission_rate",
+  "pricing_optimization_score",
+  "column_break_7",
+  "revenue_growth_rate",
+  "cost_per_acquisition",
+  "lifetime_value",
+  "roi_percentage",
+  "dashboard_config_section",
+  "dashboard_layout",
+  "chart_types",
+  "refresh_interval",
+  "auto_alerts",
+  "column_break_8",
+  "export_formats",
+  "scheduled_reports",
+  "report_recipients",
+  "custom_filters",
+  "advanced_analytics_section",
+  "ml_model_used",
+  "model_accuracy",
+  "feature_importance",
+  "anomaly_detection",
+  "column_break_9",
+  "sentiment_analysis",
+  "clustering_insights",
+  "correlation_matrix",
+  "predictive_confidence",
+  "system_metadata_section",
+  "data_sources",
+  "data_quality_score",
+  "last_updated",
+  "processing_time",
+  "column_break_10",
+  "created_by_user",
+  "analytics_status",
+  "error_log",
+  "version"
+ ],
+ "fields": [
+  {
+   "fieldname": "analytics_info_section",
+   "fieldtype": "Section Break",
+   "label": "Analytics Information"
+  },
+  {
+   "fieldname": "analytics_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Analytics ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "analytics_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Analytics Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Report Type",
+   "options": "Dashboard\nKPI Report\nPredictive Analytics\nMarket Trends\nProvider Benchmarking\nStudent Success\nRevenue Optimization\nCustom Report",
+   "reqd": 1
+  },
+  {
+   "fieldname": "analytics_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Analytics Category",
+   "options": "Operational\nStrategic\nTactical\nCompliance\nPerformance\nPredictive\nDiagnostic\nDescriptive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_frequency",
+   "fieldtype": "Select",
+   "label": "Report Frequency",
+   "options": "Real-time\nHourly\nDaily\nWeekly\nMonthly\nQuarterly\nAnnually\nOn-demand",
+   "reqd": 1
+  },
+  {
+   "fieldname": "analytics_period",
+   "fieldtype": "Select",
+   "label": "Analytics Period",
+   "options": "Last 24 Hours\nLast 7 Days\nLast 30 Days\nLast 90 Days\nLast 6 Months\nLast 12 Months\nCustom Range",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_range_from",
+   "fieldtype": "Date",
+   "label": "Date Range From"
+  },
+  {
+   "fieldname": "date_range_to",
+   "fieldtype": "Date",
+   "label": "Date Range To"
+  },
+  {
+   "fieldname": "kpi_metrics_section",
+   "fieldtype": "Section Break",
+   "label": "KPI Metrics & Real-time Dashboard"
+  },
+  {
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total Students"
+  },
+  {
+   "fieldname": "active_inquiries",
+   "fieldtype": "Int",
+   "label": "Active Inquiries"
+  },
+  {
+   "fieldname": "total_providers",
+   "fieldtype": "Int",
+   "label": "Total Providers"
+  },
+  {
+   "fieldname": "active_applications",
+   "fieldtype": "Int",
+   "label": "Active Applications"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Float",
+   "label": "Overall Conversion Rate (%)"
+  },
+  {
+   "fieldname": "avg_response_time",
+   "fieldtype": "Float",
+   "label": "Average Response Time (Hours)"
+  },
+  {
+   "fieldname": "platform_satisfaction",
+   "fieldtype": "Float",
+   "label": "Platform Satisfaction Score"
+  },
+  {
+   "fieldname": "monthly_revenue",
+   "fieldtype": "Currency",
+   "label": "Monthly Revenue"
+  },
+  {
+   "fieldname": "predictive_analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Predictive Analytics & Forecasting"
+  },
+  {
+   "fieldname": "forecast_model",
+   "fieldtype": "Select",
+   "label": "Forecast Model",
+   "options": "Linear Regression\nTime Series\nARIMA\nNeural Network\nEnsemble\nCustom Model"
+  },
+  {
+   "fieldname": "prediction_accuracy",
+   "fieldtype": "Float",
+   "label": "Prediction Accuracy (%)"
+  },
+  {
+   "fieldname": "forecasted_inquiries",
+   "fieldtype": "Int",
+   "label": "Forecasted Inquiries (Next 30 Days)"
+  },
+  {
+   "fieldname": "forecasted_conversions",
+   "fieldtype": "Int",
+   "label": "Forecasted Conversions (Next 30 Days)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "revenue_forecast",
+   "fieldtype": "Currency",
+   "label": "Revenue Forecast (Next 30 Days)"
+  },
+  {
+   "fieldname": "churn_probability",
+   "fieldtype": "Float",
+   "label": "Student Churn Probability (%)"
+  },
+  {
+   "fieldname": "growth_trend",
+   "fieldtype": "Select",
+   "label": "Growth Trend",
+   "options": "Exponential Growth\nLinear Growth\nSteady State\nDeclining\nVolatile"
+  },
+  {
+   "fieldname": "seasonality_factor",
+   "fieldtype": "Float",
+   "label": "Seasonality Factor"
+  },
+  {
+   "fieldname": "market_trends_section",
+   "fieldtype": "Section Break",
+   "label": "Market Trends & Opportunity Analysis"
+  },
+  {
+   "fieldname": "trending_destinations",
+   "fieldtype": "Small Text",
+   "label": "Trending Destinations"
+  },
+  {
+   "fieldname": "popular_programs",
+   "fieldtype": "Small Text",
+   "label": "Popular Programs"
+  },
+  {
+   "fieldname": "emerging_markets",
+   "fieldtype": "Small Text",
+   "label": "Emerging Markets"
+  },
+  {
+   "fieldname": "market_saturation",
+   "fieldtype": "Float",
+   "label": "Market Saturation Level (%)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competitive_landscape",
+   "fieldtype": "Float",
+   "label": "Competitive Landscape Score"
+  },
+  {
+   "fieldname": "opportunity_score",
+   "fieldtype": "Float",
+   "label": "Market Opportunity Score"
+  },
+  {
+   "fieldname": "demand_volatility",
+   "fieldtype": "Float",
+   "label": "Demand Volatility Index"
+  },
+  {
+   "fieldname": "market_sentiment",
+   "fieldtype": "Select",
+   "label": "Market Sentiment",
+   "options": "Very Positive\nPositive\nNeutral\nNegative\nVery Negative"
+  },
+  {
+   "fieldname": "provider_benchmarking_section",
+   "fieldtype": "Section Break",
+   "label": "Provider Performance Benchmarking"
+  },
+  {
+   "fieldname": "top_performing_provider",
+   "fieldtype": "Data",
+   "label": "Top Performing Provider"
+  },
+  {
+   "fieldname": "avg_provider_conversion",
+   "fieldtype": "Float",
+   "label": "Average Provider Conversion Rate (%)"
+  },
+  {
+   "fieldname": "best_conversion_rate",
+   "fieldtype": "Float",
+   "label": "Best Conversion Rate (%)"
+  },
+  {
+   "fieldname": "provider_satisfaction_avg",
+   "fieldtype": "Float",
+   "label": "Average Provider Satisfaction"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "underperforming_providers",
+   "fieldtype": "Int",
+   "label": "Underperforming Providers Count"
+  },
+  {
+   "fieldname": "provider_tier_distribution",
+   "fieldtype": "Small Text",
+   "label": "Provider Tier Distribution"
+  },
+  {
+   "fieldname": "avg_response_time_providers",
+   "fieldtype": "Float",
+   "label": "Average Provider Response Time (Hours)"
+  },
+  {
+   "fieldname": "quality_score_variance",
+   "fieldtype": "Float",
+   "label": "Quality Score Variance"
+  },
+  {
+   "fieldname": "student_success_section",
+   "fieldtype": "Section Break",
+   "label": "Student Success Tracking & Outcomes"
+  },
+  {
+   "fieldname": "successful_applications",
+   "fieldtype": "Int",
+   "label": "Successful Applications"
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Float",
+   "label": "Overall Success Rate (%)"
+  },
+  {
+   "fieldname": "avg_processing_time",
+   "fieldtype": "Float",
+   "label": "Average Processing Time (Days)"
+  },
+  {
+   "fieldname": "student_satisfaction_score",
+   "fieldtype": "Float",
+   "label": "Student Satisfaction Score"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nps_score",
+   "fieldtype": "Float",
+   "label": "Net Promoter Score (NPS)"
+  },
+  {
+   "fieldname": "referral_rate",
+   "fieldtype": "Float",
+   "label": "Student Referral Rate (%)"
+  },
+  {
+   "fieldname": "retention_rate",
+   "fieldtype": "Float",
+   "label": "Student Retention Rate (%)"
+  },
+  {
+   "fieldname": "outcome_categories",
+   "fieldtype": "Small Text",
+   "label": "Outcome Categories"
+  },
+  {
+   "fieldname": "revenue_optimization_section",
+   "fieldtype": "Section Break",
+   "label": "Revenue Optimization & Pricing Insights"
+  },
+  {
+   "fieldname": "total_platform_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Platform Revenue"
+  },
+  {
+   "fieldname": "revenue_per_student",
+   "fieldtype": "Currency",
+   "label": "Revenue Per Student"
+  },
+  {
+   "fieldname": "avg_commission_rate",
+   "fieldtype": "Float",
+   "label": "Average Commission Rate (%)"
+  },
+  {
+   "fieldname": "pricing_optimization_score",
+   "fieldtype": "Float",
+   "label": "Pricing Optimization Score"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "revenue_growth_rate",
+   "fieldtype": "Float",
+   "label": "Revenue Growth Rate (%)"
+  },
+  {
+   "fieldname": "cost_per_acquisition",
+   "fieldtype": "Currency",
+   "label": "Cost Per Acquisition"
+  },
+  {
+   "fieldname": "lifetime_value",
+   "fieldtype": "Currency",
+   "label": "Student Lifetime Value"
+  },
+  {
+   "fieldname": "roi_percentage",
+   "fieldtype": "Float",
+   "label": "Return on Investment (%)"
+  },
+  {
+   "fieldname": "dashboard_config_section",
+   "fieldtype": "Section Break",
+   "label": "Dashboard Configuration & Reports"
+  },
+  {
+   "fieldname": "dashboard_layout",
+   "fieldtype": "Select",
+   "label": "Dashboard Layout",
+   "options": "Executive Summary\nOperational Details\nCustom Layout\nComparative Analysis\nTrend Focused"
+  },
+  {
+   "fieldname": "chart_types",
+   "fieldtype": "Small Text",
+   "label": "Chart Types"
+  },
+  {
+   "fieldname": "refresh_interval",
+   "fieldtype": "Int",
+   "label": "Refresh Interval (Minutes)"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_alerts",
+   "fieldtype": "Check",
+   "label": "Auto Alerts Enabled"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "export_formats",
+   "fieldtype": "Small Text",
+   "label": "Export Formats"
+  },
+  {
+   "default": "0",
+   "fieldname": "scheduled_reports",
+   "fieldtype": "Check",
+   "label": "Scheduled Reports"
+  },
+  {
+   "fieldname": "report_recipients",
+   "fieldtype": "Small Text",
+   "label": "Report Recipients"
+  },
+  {
+   "fieldname": "custom_filters",
+   "fieldtype": "Long Text",
+   "label": "Custom Filters"
+  },
+  {
+   "fieldname": "advanced_analytics_section",
+   "fieldtype": "Section Break",
+   "label": "Advanced Analytics & Intelligence"
+  },
+  {
+   "fieldname": "ml_model_used",
+   "fieldtype": "Select",
+   "label": "ML Model Used",
+   "options": "Random Forest\nGradient Boosting\nNeural Network\nSVM\nLinear Regression\nLogistic Regression\nEnsemble\nCustom"
+  },
+  {
+   "fieldname": "model_accuracy",
+   "fieldtype": "Float",
+   "label": "Model Accuracy Score"
+  },
+  {
+   "fieldname": "feature_importance",
+   "fieldtype": "Small Text",
+   "label": "Top Feature Importance"
+  },
+  {
+   "default": "0",
+   "fieldname": "anomaly_detection",
+   "fieldtype": "Check",
+   "label": "Anomaly Detection Enabled"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sentiment_analysis",
+   "fieldtype": "Float",
+   "label": "Sentiment Analysis Score"
+  },
+  {
+   "fieldname": "clustering_insights",
+   "fieldtype": "Small Text",
+   "label": "Clustering Insights"
+  },
+  {
+   "fieldname": "correlation_matrix",
+   "fieldtype": "Small Text",
+   "label": "Key Correlations"
+  },
+  {
+   "fieldname": "predictive_confidence",
+   "fieldtype": "Float",
+   "label": "Predictive Confidence Level (%)"
+  },
+  {
+   "fieldname": "system_metadata_section",
+   "fieldtype": "Section Break",
+   "label": "System Metadata & Tracking"
+  },
+  {
+   "fieldname": "data_sources",
+   "fieldtype": "Small Text",
+   "label": "Data Sources"
+  },
+  {
+   "fieldname": "data_quality_score",
+   "fieldtype": "Float",
+   "label": "Data Quality Score (%)"
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated"
+  },
+  {
+   "fieldname": "processing_time",
+   "fieldtype": "Float",
+   "label": "Processing Time (Seconds)"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "analytics_status",
+   "fieldtype": "Select",
+   "label": "Analytics Status",
+   "options": "Active\nProcessing\nCompleted\nError\nScheduled\nPaused",
+   "reqd": 1
+  },
+  {
+   "fieldname": "error_log",
+   "fieldtype": "Long Text",
+   "label": "Error Log"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Analytics Version"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-19 10:00:03.096983",
+ "modified_by": "Administrator",
+ "module": "Flyout Hub",
+ "name": "Platform Analytics",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "analytics_name",
+ "track_changes": 1
+}
